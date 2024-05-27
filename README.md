@@ -2,7 +2,7 @@
 <li><b>docker compose build</b> - используем для сборки образов Docker</li>
 <li><b>make up</b> - вводим для запуска контейнера(docker compose up)</li>
 <h2>Для установки Laravel</h2>
-<li><b>make cli</b> - вводим для доступа к вводу php команд в терминале</li>
+<li><b>make cli</b> - вводим для доступа к вводу php команд в терминале (docker compose exec php-cli bash)</li>
 
 <li><b>compose create-project laravel/laravel example-app</b> - используем для создания Laravel</li>
 <li><b>exit</b> - используем для выхода из доступа к php в терминале</li>
