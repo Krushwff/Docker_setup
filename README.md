@@ -4,7 +4,7 @@
 <h2>Для установки Laravel</h2>
 <li><b>make cli</b> - вводим для доступа к вводу php команд в терминале (docker compose exec php-cli bash)</li>
 
-<li><b>compose create-project laravel/laravel example-app</b> - используем для создания Laravel</li>
+<li><b>composer create-project laravel/laravel example-app</b> - используем для создания Laravel</li>
 <li><b>exit</b> - используем для выхода из доступа к php в терминале</li>
 <li><b>mv example-app/* ./</b> - переносим все файлы из папки example-app в корневую</li>
 <li><b>mv example-app/.* ./</b> - переносим все файлы с точкой из папки example-app в корневую</li>
