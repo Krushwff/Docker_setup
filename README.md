@@ -1,13 +1,50 @@
-<h1>Докер контейнер для работы с Laravel</h1>
-<li><b>docker compose build</b> - используем для сборки образов Docker</li>
-<li><b>make up</b> - вводим для запуска контейнера(docker compose up)</li>
-<h2>Для установки Laravel</h2>
-<li><b>make cli</b> - вводим для доступа к вводу php команд в терминале (docker compose exec php-cli bash)</li>
+# Настройка Docker для работы с Laravel
+<h2>Важно</h2>
 
-<li><b>composer create-project laravel/laravel example-app</b> - используем для создания Laravel</li>
-<li><b>exit</b> - используем для выхода из доступа к php в терминале</li>
-<li><b>mv example-app/* ./</b> - переносим все файлы из папки example-app в корневую</li>
-<li><b>mv example-app/.* ./</b> - переносим все файлы с точкой из папки example-app в корневую</li>
-<li><b>ls example-app</b> - проверяем папку example-app на содержимое файлов</li>
-<li><b>rm -rf example-app</b> - удаляем папку example-app</li>
-<li><b>sudo chmod 777 -R storage</b> - делаем так, что любой пользователь d системе может читать, писать и выполнять файлы в каталоге storage и во всех его подкаталогах и файлах.</li>
+>Перед работой проекта необходимо поменять названия для будущей БД
+https://github.com/Krushwff/Docker_setup/blob/05dea06017d30ea565bfa34b94d1049907c8ffed/docker-compose.yml#L56
+
+<b>Используем для сборки образов Docker<b>
+```sh
+docker compose build
+```
+<b>Для запуска контейнера(docker compose up)<b>
+```sh
+make up
+```
+<h2>Для установки Laravel</h2>
+
+>ВАЖНО после создания проекта Laravel нужно изменить название БД в файле .env и добавить пароль 'secret'.
+
+<b>Вводим следующую команду для доступа к вводу php команд в терминале (docker compose exec php-cli bash)<b>
+```sh
+make cli
+```
+<b>Используем для создания проекта Laravel<b>
+```sh
+composer create-project laravel/laravel example-app
+```
+<b>Вводим следующую команду для выхода из доступа к php<b>
+```sh
+exit
+```
+<b>Переносим все файлы из папки example-app в корневую<b>
+```sh
+mv example-app/* ./
+```
+<b>Преносим все файлы с точкой из папки example-app в корневую<b>
+```sh
+mv example-app/.* ./
+```
+<b>Проверяем папку example-app на содержимое файлов<b>
+```sh
+ls example-app
+```
+<b>Удаляем папку example-app<b>
+```sh
+rm -rf example-app
+```
+<b>Делаем так, что любой пользователь d системе может читать, писать и выполнять файлы в каталоге storage и во всех его подкаталогах и файлах.<b>
+```sh
+sudo chmod 777 -R storage
+```
